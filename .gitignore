@@ -1,5 +1,6 @@
 *.pyc
 *.pyo
+__init__.py
 *.mo
 *.db
 *.egg-info/
