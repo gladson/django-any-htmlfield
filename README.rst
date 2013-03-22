@@ -78,26 +78,27 @@ Using Redactor (commercial from Imperavi)
 
 To use the Radactor editor from Imperavi, install::
 
-    pip install django-any-htmlfield django-imperavi
+    pip install django-any-htmlfield django-wysiwyg-redactor
 
 And configure it::
 
     INSTALLED_APPS += (
         'any_htmlfield',
-        'imperavi',
+        'redactor',
     )
 
-And complete the configuration of django-imperavi_::
+And complete the configuration of `django-wysiwyg-redactor <https://github.com/douglasmiranda/django-wysiwyg-redactor/>`_::
 
-    IMPERAVI_UPLOAD_PATH = MEDIA_ROOT
+    REDACTOR_OPTIONS = {'lang': 'en'}
+    REDACTOR_UPLOAD = 'uploads/'
 
 And the required URLs::
 
     urlpatterns += patterns('',
-        url(r'^imperavi/', include('imperavi.urls')),
+        url(r'^redactor/', include('redactor.urls')),
     )
 
-Make sure you also buy an official license at http://redactorjs.com/download/
+Make sure you also buy an official license at http://imperavi.com/redactor/download/
 
 
 Changelog
